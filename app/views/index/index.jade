@@ -1,0 +1,12 @@
+header
+  h1 todos
+
+section#main
+  form#TodoForm(data-on-submit=":formCreate", onsubmit="return false")
+    input#title(type="text", placeholder="")
+    input#done(type="checkbox")
+    input(type="submit")
+
+  ul#TodoList
+    li(data-each-todo=":all < .items .completed")
+      span(data-text="todo:title")
